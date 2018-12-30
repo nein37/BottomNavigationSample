@@ -21,7 +21,7 @@ class ContentsFragment : Fragment() {
         button.setOnClickListener {
 
             // Fragment.requireFragmentManager() は自分自身の遷移に利用された FragmentManagerを返す
-            // (ここでは PrimarynavigationFragment の childFragmentmanager )
+            // (ここでは TabFragment の childFragmentmanager )
             requireFragmentManager().beginTransaction().apply {
                 val nextFragment = ContentsFragment().apply {
                     arguments = Bundle().apply {

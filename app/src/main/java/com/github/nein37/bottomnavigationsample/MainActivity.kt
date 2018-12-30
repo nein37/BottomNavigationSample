@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 add(R.id.contents, primaryNavigationFragment, tag)
 
-                // TabFragment に設定することで popBackStack() する際に TabFragment の childFragmentManager の backStack があればそれを pop するようになる
+                // PrimaryNavigationFragment に設定することで popBackStack() する際に TabFragment の childFragmentManager の backStack があればそれを pop するようになる
                 setPrimaryNavigationFragment(primaryNavigationFragment)
             } else {
                 // すでに TabFragment が存在する場合は attach
                 attach(targetFragment)
-                // TabFragment 再設定
+                // PrimaryNavigationFragment 再設定
                 setPrimaryNavigationFragment(targetFragment)
             }
         }.commit()
